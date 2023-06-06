@@ -10,6 +10,8 @@ var serviceProvider = new ServiceCollection()
         .AddTransient(typeof(IFactory<,>), typeof(Factory<,>))
         .AddTransient(typeof(IConsoleWriter), typeof(DigitsWriter))
         .AddTransient(typeof(IConsoleWriter), typeof(LettersWriter))
+        .AddTransient(typeof(IStringFormatter), typeof(ToLowerCaseStringFormatter))
+        .AddTransient(typeof(IStringFormatter), typeof(ToUpperCaseStringFormatter))
     .BuildServiceProvider();
 
 var singleCriterionFactory = serviceProvider.GetRequiredService<IFactory<IConsoleWriter, ConsoleWriterTypeEnum>>();
@@ -17,6 +19,6 @@ var singleCriterionStrategy = singleCriterionFactory.GetStrategy(ConsoleWriterTy
 singleCriterionStrategy.WriteToConsole();
 
 var multipleCriteriaFactory = serviceProvider.GetRequiredService<IFactory<IStringFormatter>>();
-var multipleCriteriaStrategy = multipleCriteriaFactory.GetStrategy(new FormatterPicker(ConsoleWriterTypeEnum.Digits));
-strategy.WriteToConsole();
+var multipleCriteriaStrategy = multipleCriteriaFactory.GetStrategy(new FormatterPicker(FormatterTypeEnum.ToUpperCase));
+multipleCriteriaStrategy.WriteToConsole("sAmpLe");
 Console.ReadLine();

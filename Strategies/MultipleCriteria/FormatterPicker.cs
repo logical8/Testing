@@ -4,15 +4,21 @@ namespace Strategies;
 
 public class FormatterPicker : IStrategyPicker<IStringFormatter>
 {
-    public FormatterPicker(ConsoleWriterTypeEnum consoleWriterType)
+    public FormatterPicker(FormatterTypeEnum formatterType)
     {
-        ConsoleWriterType = consoleWriterType;
+        FormatterType = formatterType;
     }
 
-    private ConsoleWriterTypeEnum? ConsoleWriterType { get; }
+    private FormatterTypeEnum? FormatterType { get; }
     
     public Func<IStringFormatter, bool> GetConditionsPredicate()
     {
-        return f => f.StrategyType == ConsoleWriterType;
+        return f => f.StrategyType == FormatterType;
     }
+}
+
+public enum FormatterTypeEnum
+{
+    ToUpperCase,
+    ToLowerCase
 }
