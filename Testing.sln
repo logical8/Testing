@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expressions", "Expressions\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategies", "Strategies\Strategies.csproj", "{18E069C4-8EC9-4080-8DF8-0BFC86D0DBCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{2DB52E46-DF53-4ED1-953F-4EAD8E303255}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{18E069C4-8EC9-4080-8DF8-0BFC86D0DBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E069C4-8EC9-4080-8DF8-0BFC86D0DBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E069C4-8EC9-4080-8DF8-0BFC86D0DBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DB52E46-DF53-4ED1-953F-4EAD8E303255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DB52E46-DF53-4ED1-953F-4EAD8E303255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DB52E46-DF53-4ED1-953F-4EAD8E303255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DB52E46-DF53-4ED1-953F-4EAD8E303255}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
